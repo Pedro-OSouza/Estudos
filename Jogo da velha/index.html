@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da velha</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/font.css" />
+    <link rel="icon" href="style/imgs/icon.png" />
+    <script src="jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="fundo">
+      <!-- div e imagem para colocar um background decente -->
+      <img src="style/imgs/fundo.png" alt="Imagem de fundo" />
+
+      <div class="interface">
+        <!-- essa div separa o background dos outros elementos sobrepondo eles ao background -->
+
+        <header>
+          <h1>Jogo da velha #</h1>
+          <hr />
+          <div class="placar">
+            <div>
+              <h2>
+                X:
+                <h3 id="placar1"></h3>
+              </h2>
+            </div>
+            <div>
+              <h2>
+                O:
+                <h3 id="placar2"></h3>
+              </h2>
+            </div>
+            <hr />
+          </div>
+        </header>
+
+        <div class="mesa-jogo">
+          <!-- o jogo -->
+          <button class="jogo" id="quadrado11"></button>
+          <button class="jogo" id="quadrado21"></button>
+          <button class="jogo" id="quadrado31"></button>
+
+          <button class="jogo" id="quadrado12"></button>
+          <button class="jogo" id="quadrado22"></button>
+          <button class="jogo" id="quadrado32"></button>
+
+          <button class="jogo" id="quadrado13"></button>
+          <button class="jogo" id="quadrado23"></button>
+          <button class="jogo" id="quadrado33"></button>
+        </div>
+
+        <div class="botoes">
+          <!-- botoes de reiniciar jogo e placar -->
+          <button class="botao" id="reiniciar">Reiniciar jogo</button>
+          <button class="botao" id="zerar">Zerar placar</button>
+        </div>
+      </div>
+      <!-- aqui termina a div da interface -->
+    </div>
+    <!-- aqui termina a div do background -->
+
+    <!-- modal que informa o resultado da partida -->
+    <div id="modal-container">
+      <div class="borda">
+        <div class="modal" id="modal">
+          <div class="borda-interna">
+            <div class="modal-header">
+              <h3 id="title">Vitória!</h3>
+              <hr />
+            </div>
+            <div class="modal-body">
+              <h1 id="resultado">X ganhou!</h1>
+            </div>
+            <div class="modal-footer">
+              <button id="button-sair" class="button">OKAY</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

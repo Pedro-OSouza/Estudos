@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: giz;
+}
+
+.fundo {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.interface {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  margin-left: 50%;
+  transform: translate(-50%);
+  width: calc(100vw / 2 - 4%);
+  height: 55%;
+}
+
+header {
+  text-align: center;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.placar {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.placar h3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.placar div {
+  display: flex;
+  justify-content: center;
+}
+
+.mesa-jogo {
+  height: calc(100vh / 2);
+  width: calc(100vw / 2 - 10%);
+  display: grid;
+  grid-template-rows: 33.4% 33.4% 33.4%;
+  grid-template-columns: 33.4% 33.4% 33.4%;
+}
+
+.jogo {
+  background-color: #5e9b77;
+  border: #ffffff solid 2px;
+  text-align: center;
+  justify-content: center;
+  line-height: 100px;
+  font-size: 300%;
+}
+
+.botoes {
+  margin-right: 5%;
+  margin-top: 2%;
+  position: relative;
+}
+
+.botao {
+  width: 20%;
+  margin-right: 5px;
+  height: 40px;
+  border: #ffffff solid 2px;
+  border-radius: 5px;
+  background-color: #5e9b77;
+}
+
+#modal-container {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+}
+
+.borda {
+  position: absolute;
+  border: #000 solid 5px;
+  width: 448px;
+  height: 227px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.borda-interna {
+  width: 103%;
+  height: 112%;
+  border: #000 solid 3px;
+  margin: 0;
+  margin-left: -2.3%;
+  margin-top: -3%;
+  margin-bottom: -4%;
+}
+
+.modal {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-size: 200%;
+  background-color: #5e9b77;
+  border: #c79452 solid 15px;
+}
+
+.modal-header {
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-body h1 {
+  margin: 0;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.button {
+  width: 50%;
+  height: 14%;
+  font-size: 100%;
+  border: #ffffff 2px solid;
+  background-color: #5e9b77;
+}

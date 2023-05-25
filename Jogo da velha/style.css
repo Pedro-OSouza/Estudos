@@ -4,7 +4,11 @@
   font-family: giz;
 }
 
-.fundo {
+.cor_verde { /* cor verde que é reaproveitada em tudo no jogo */
+  background-color: #5e9b77;
+}
+
+.fundo { /* class que coloca ajuda a adicionar a imagem de fundo */
   position: relative;
   justify-content: center;
   align-items: center;
@@ -20,8 +24,7 @@ img {
   position: absolute;
   justify-content: center;
   align-items: center;
-  margin-top: 7%;
-  margin-left: 50%;
+  margin: 7% 0% 0% 50%;
   transform: translate(-50%);
   width: calc(100vw / 2 - 4%);
   height: 55%;
@@ -30,25 +33,17 @@ img {
 header {
   text-align: center;
   align-items: center;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin: 2% 0% 2% 0%;
 }
 
 .placar {
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin: 1% 0% 1% 0%; /* espaçamento entre os elementos do placar */
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.placar h3 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.placar div {
+.placar div { /* essa div ajuda a organizar os elementos do placar */
   display: flex;
   justify-content: center;
 }
@@ -56,13 +51,12 @@ header {
 .mesa-jogo {
   height: calc(100vh / 2);
   width: calc(100vw / 2 - 10%);
-  display: grid;
+  display: grid; /* o grid que separa organiza os botoes clicaveis */
   grid-template-rows: 33.4% 33.4% 33.4%;
   grid-template-columns: 33.4% 33.4% 33.4%;
 }
 
-.jogo {
-  background-color: #5e9b77;
+.jogo { /* O jogo */
   border: #ffffff solid 2px;
   text-align: center;
   justify-content: center;
@@ -71,8 +65,7 @@ header {
 }
 
 .botoes {
-  margin-right: 5%;
-  margin-top: 2%;
+  margin: 2% 5% 0% 0%;
   position: relative;
 }
 
@@ -82,16 +75,15 @@ header {
   height: 40px;
   border: #ffffff solid 2px;
   border-radius: 5px;
-  background-color: #5e9b77;
 }
 
-#modal-container {
+#modal-container { /* a partir daqui começa a mexer com o modal */
   display: none;
   position: fixed;
   z-index: 99999;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* aplica um efeito de desfoque nos elementos ao fundo */
 }
 
 .borda {
@@ -108,15 +100,11 @@ header {
   width: 103%;
   height: 112%;
   border: #000 solid 3px;
-  margin: 0;
-  margin-left: -2.3%;
-  margin-top: -3%;
-  margin-bottom: -4%;
+  margin: -3% 2.3% -4% -2.1%;
 }
 
 .modal {
   position: absolute;
-  background-color: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -125,7 +113,6 @@ header {
   width: 100%;
   text-align: center;
   font-size: 200%;
-  background-color: #5e9b77;
   border: #c79452 solid 15px;
 }
 
@@ -133,26 +120,17 @@ header {
   margin-bottom: 20px;
 }
 
-.modal-header h3 {
-  margin: 0;
-}
-
 .modal-body {
   margin-bottom: 20px;
-}
-
-.modal-body h1 {
-  margin: 0;
 }
 
 .modal-footer {
   text-align: center;
 }
 
-.button {
+.button { /* botao de fechar o modal */
   width: 50%;
   height: 14%;
   font-size: 100%;
   border: #ffffff 2px solid;
-  background-color: #5e9b77;
 }

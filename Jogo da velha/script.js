@@ -3,9 +3,11 @@ const quadrados = document.querySelectorAll(".jogo");
 const reiniciar = document.getElementById("reiniciar");
 const zerar = document.getElementById("zerar");
 const modalContainer = document.getElementById("modal-container");
+const modalTitle = document.getElementById("title");
 const modalResultado = document.getElementById("resultado");
 const fecharModal = document.getElementById("button-sair");
 let vencedor;
+let titleModal;
 let placarX = 0;
 let placarO = 0;
 let jogador = "O";
@@ -28,13 +30,6 @@ function marcar(quadrado) {
     // marcar no tabuleiro
     quadrado.innerHTML = jogador;
 
-    // alternar o jogador
-    if (jogador == "O") {
-      jogador = "X";
-    } else {
-      jogador = "O";
-    }
-
     $(quadrado).hide().fadeIn();
   }
 
@@ -44,7 +39,30 @@ function marcar(quadrado) {
   tabuleiro[linha][coluna] = jogador;
 
   verificarVencedor();
+
+  // alternar o jogador
+  if (jogador == "O") {
+    jogador = "X";
+  } else {
+    jogador = "O";
+  }
 }
+
+// mostrar resultado em um modal
+function mostrarModal() {
+  modalTitle.innerHTML = titleModal; 
+  modalResultado.innerHTML = `${vencedor} VENCEU!`;
+  modalContainer.style.display = "block";
+  $(modalContainer).hide().fadeIn();
+}
+
+// esconder modal
+function esconderModal() {
+  modalContainer.style.display = "none";
+  resetarJogo();
+}
+
+fecharModal.addEventListener("click", esconderModal);
 
 // resetar jogo
 
@@ -64,8 +82,8 @@ function zerarPlacar() {
   resetarJogo();
   placarX = 0;
   placarO = 0;
-  placar1.innerHTML = placarO;
-  placar2.innerHTML = placarX;
+  placar2.innerHTML = placarO;
+  placar1.innerHTML = placarX;
 }
 
 // verificar vencedor
@@ -79,33 +97,21 @@ function verificarVencedor() {
     ) {
       if (tabuleiro[i][0] == "O") {
         placarO++;
-        document.getElementById("placar1").innerHTML = placarO;
-        vencedor = "X"; //gambiarra! não mecha
+        document.getElementById("placar2").innerHTML = placarO;
+        vencedor = "O";
+        titleModal = "Vencedor!"
         mostrarModal();
       } else {
         placarX++;
-        document.getElementById("placar2").innerHTML = placarX;
-        vencedor = "O"; //gambiarra! não mecha
+        document.getElementById("placar1").innerHTML = placarX;
+        vencedor = "X";
+        titleModal = "Vencedor!"
         mostrarModal();
       }
       resetarJogo();
       return;
     }
   }
-
-  // mostrar resultado em um modal
-  function mostrarModal() {
-    modalResultado.innerHTML = `${vencedor} VENCEU!`;
-    modalContainer.style.display = "block";
-    $(modalContainer).hide().fadeIn();
-  }
-
-  // esconder modal
-  function esconderModal() {
-    modalContainer.style.display = "none";
-  }
-
-  fecharModal.addEventListener("click", esconderModal);
 
   // verificar colunas
   for (let i = 0; i < 3; i++) {
@@ -116,13 +122,15 @@ function verificarVencedor() {
     ) {
       if (tabuleiro[0][i] == "O") {
         placarO++;
-        document.getElementById("placar1").innerHTML = placarO;
-        vencedor = "X"; //gambiarra! não mecha
+        document.getElementById("placar2").innerHTML = placarO;
+        vencedor = "O";
+        titleModal = "Vencedor!"
         mostrarModal();
       } else {
         placarX++;
-        document.getElementById("placar2").innerHTML = placarX;
-        vencedor = "O"; //gambiarra! não mecha
+        document.getElementById("placar1").innerHTML = placarX;
+        vencedor = "X";
+        titleModal = "Vencedor!"
         mostrarModal();
       }
       resetarJogo();
@@ -138,13 +146,15 @@ function verificarVencedor() {
   ) {
     if (tabuleiro[0][0] == "O") {
       placarO++;
-      document.getElementById("placar1").innerHTML = placarO;
-      vencedor = "X"; //gambiarra! não mecha
+      document.getElementById("placar2").innerHTML = placarO;
+      vencedor = "O";
+      titleModal = "Vencedor!"
       mostrarModal();
     } else {
       placarX++;
-      document.getElementById("placar2").innerHTML = placarX;
-      vencedor = "O"; //gambiarra! não mecha
+      document.getElementById("placar1").innerHTML = placarX;
+      vencedor = "X";
+      titleModal = "Vencedor!"
       mostrarModal();
     }
     resetarJogo();
@@ -159,13 +169,15 @@ function verificarVencedor() {
   ) {
     if (tabuleiro[0][2] == "O") {
       placarO++;
-      document.getElementById("placar1").innerHTML = placarO;
-      vencedor = "X"; //gambiarra! não mecha
+      document.getElementById("placar2").innerHTML = placarO;
+      vencedor = "O";
+      titleModal = "Vencedor!"
       mostrarModal();
     } else {
       placarX++;
-      document.getElementById("placar2").innerHTML = placarX;
-      vencedor = "O"; //gambiarra! não mecha
+      document.getElementById("placar1").innerHTML = placarX;
+      vencedor = "X";
+      titleModal = "Vencedor!"
       mostrarModal();
     }
   }
@@ -185,6 +197,8 @@ function verificarVencedor() {
   if (empate) {
     console.log("Empate!");
     vencedor = "Nenhum jogador";
+    titleModal = "Empate!"
+    document.getElementById("title").innerHTML = "Empate!";
     mostrarModal();
     resetarJogo();
     return;

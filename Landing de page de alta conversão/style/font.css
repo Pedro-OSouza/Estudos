@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "noto-serif-normal" ;
+    src: url("./font/NotoSerifDisplay_ExtraCondensed-Light.ttf");
+}
+
+@font-face {
+    font-family: "noto-serif-italico";
+    src: url("./font/NotoSerifDisplay_ExtraCondensed-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: "tex-gyre-italic";
+    src: url("./font/tex-gyre-termes.italic.otf");
+}
+
+@font-face {
+    font-family: "tex-gyre-normal";
+    src: url("./font/tex-gyre-termes.regular.otf");
+}

@@ -44,20 +44,20 @@
 
 }
 
-@media (max-width: 412px) {
+@media (max-width: 415px) {
    .menu-horizontal {
         display: none;
     }
 
     #menu-icon {
         display: block;
-        margin-left: -15%;
+        /* margin-left: -15%; */
         
     }
 
     .menu-lateral {
-        display: block;
-        margin-left: 0%;
+        display: none;
+        right: 0;
     }
 
     header h2 {

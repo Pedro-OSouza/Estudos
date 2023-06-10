@@ -4,20 +4,25 @@
     }
 
     #menu-icon {
-        display: block;
-        margin-left: -15%;
-
+        visibility: visible;
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: 2rem;
     }
 
     .menu-lateral {
-        display: block;
-        margin-left: 0%;
+        visibility: hidden;
+        right: 0;
     }
 
-    header h2{
-        margin: 0rem auto;
-        font-size: 1.3rem;
+    .menu {
+        margin-top: 3rem;
     }
+
+    header h2 {
+        margin-left: 1rem;
+    }
+
 
     h1 {
         font-size: 2rem;
@@ -50,13 +55,14 @@
     }
 
     #menu-icon {
-        display: block;
-        /* margin-left: -15%; */
-        
+        visibility:visible;
+        margin-right: 0;
+        margin-left: auto;
+
     }
 
     .menu-lateral {
-        display: none;
+        visibility: hidden;
         right: 0;
     }
 

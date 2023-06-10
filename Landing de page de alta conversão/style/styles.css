@@ -28,11 +28,7 @@ header{
 }
 
 header h2 {
-    margin: 1rem 0 0 auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    margin: 1rem auto 0 auto;
     font-family: var(--noto-serif);
 }
 
@@ -65,11 +61,13 @@ li:last-child:hover{
 
 /* menu lateral responsivo */
 #menu-icon {
-    margin-top: 0rem;
-    padding-top: 0.5rem;
-    width: 8%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    right: 3rem;
+    left: auto;
+    width: 20%;
     position: absolute;
-    display: none;
+    visibility: hidden;
     z-index: 9999;
 }
 
@@ -81,7 +79,7 @@ li:last-child:hover{
     position: absolute;
     margin-top: -5%;
     background-color: #67d88b;
-    display: none;
+    visibility: hidden;
 }
 
 .menu {

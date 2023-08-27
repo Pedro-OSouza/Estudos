@@ -1,0 +1,27 @@
+/* header */
+ul li {
+    margin-bottom: 1rem;
+}
+
+/* hero */
+.text-shadow {
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.color-light {
+    color: #fafafa;
+}
+
+.list-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.column-line {
+    display: flex;
+    width: 2px;
+    height: 80%;
+}
+
+

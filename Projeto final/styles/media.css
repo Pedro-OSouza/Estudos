@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    /* header */
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .list-column li {
+        margin-bottom: -1rem;
+    }
+
+    /* hero section */
+    #hero-section {
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+

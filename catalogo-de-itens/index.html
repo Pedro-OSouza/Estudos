@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Itens</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Catálogo de Itens</h1>
+            <nav class="nav-item">
+                <ul>
+                    <li><a href="./cadastrar-item.html">Cadastrar Item</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <div class="search-div">
+                <label for="pesquisar">Pesquisar
+                <input type="text" id="pesquisar" name="pesquisar" placeholder="Pesquisar...">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+    
+            <div class="listar-itens">
+                <table border="1">
+                    <thead>
+                        <td>Id</td>
+                        <td colspan="3">Nome</td>
+                        <td>Categoria</td>
+                        <td>Status</td>
+                        <td>Editar</td>
+                        <td>Deletar</td>
+                    </thead>
+                    <tbody id="lista-de-itens">
+                        <td>1</td>
+                        <td colspan="3">porca</td>
+                        <td colspan="1">ferramenta</td>
+                        <td>Em Uso</td>
+                        <td class="btn">Editar</td>
+                        <td class="btn">Deletar</td>  
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="./scripts/app.js"></script>
+</body>
+</html>

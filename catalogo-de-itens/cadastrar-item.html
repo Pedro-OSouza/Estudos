@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Item</title>
+    <link rel="stylesheet" href="./css/cadastrar.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Catálogo de Itens</h1>
+            <nav class="nav-item">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="cadastrar-home">
+        <div class="container">
+            <fieldset>
+                <form action="">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria" required>
+                        <option value="" disabled selected>Categoria</option>
+                        <option value="ferramenta-robotica">Ferramenta de Robótica</option>
+                        <option value="computador">Computador</option>
+                        <option value="Movel">Móvel</option>
+                    </select>
+                    <label for="status">Status</label>
+                    <select name="status" id="status" required>
+                        <option value="" disabled selected>Status</option>
+                        <option value="em-uso">Em Uso</option>
+                        <option value="dispensado">Dispensado</option>
+                        <option value="quebrado">Quebrado</option>
+                        <option value="em-reforma">Em Reforma</option>
+                    </select>
+                    <button id="cadastrarBtn">Cadastrar</button>
+                </form>
+            </fieldset>
+        </div>
+    </section>
+
+    <script type="module" src="./scripts/cadastrar.js"></script>
+</body>
+</html>
